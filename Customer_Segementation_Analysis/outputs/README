@@ -1,0 +1,213 @@
+# Customer Segmentation using K-Means Clustering
+
+## Project Overview
+
+This project performs **customer segmentation using K-Means clustering** on the Online Retail dataset. The goal is to identify distinct customer groups based on purchasing behavior in order to support better marketing strategies, customer retention, and revenue growth.
+
+By analyzing transaction data, we engineer customer-level features and apply unsupervised machine learning to group customers into meaningful segments.
+
+---
+
+## Business Objective
+
+Businesses often struggle to treat all customers the same way. Customer segmentation helps answer key questions such as:
+
+- Who are the **most valuable customers**?
+- Which customers are **likely to churn**?
+- Which customers buy **frequently but spend less**?
+- Which groups should receive **targeted promotions**?
+
+This project clusters customers based on purchasing patterns and provides actionable insights.
+
+---
+
+## Dataset
+
+**Online Retail Dataset**
+
+The dataset contains transactions from a UK-based online retail store between 2010 and 2011.
+
+### Key Columns
+
+| Column | Description |
+|------|-------------|
+| InvoiceNo | Transaction ID |
+| StockCode | Product ID |
+| Description | Product name |
+| Quantity | Number of items purchased |
+| InvoiceDate | Date of transaction |
+| UnitPrice | Price per unit |
+| CustomerID | Unique customer identifier |
+| Country | Customer location |
+
+Each row represents **a product purchased within a transaction**.
+
+---
+
+## Project Structure
+
+---
+
+## Tools & Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- PCA (Dimensionality Reduction)
+- K-Means Clustering
+
+---
+
+## Project Workflow
+
+### 1. Data Cleaning
+- Removed missing `CustomerID`
+- Removed cancelled invoices
+- Removed negative or zero quantities and prices
+- Converted date columns
+- Created **Revenue feature**
+
+### 2. Feature Engineering
+
+Customer-level features were created using transaction data:
+
+- Recency
+- Frequency
+- Monetary Value
+- Total Quantity Purchased
+- Number of Unique Products
+- Average Order Value
+
+These features describe **customer purchasing behavior**.
+
+---
+
+### 3. Exploratory Data Analysis (EDA)
+
+Visualizations created:
+
+- Feature distribution plots
+- Boxplots for outlier detection
+- Customer behavior distributions
+
+These help understand skewness and data spread.
+
+---
+
+### 4. Data Preprocessing
+
+To prepare for clustering:
+
+- Log transformation applied to skewed features
+- StandardScaler used to normalize features
+
+This ensures K-Means performs effectively.
+
+---
+
+### 5. Determining Optimal Clusters
+
+Two methods were used:
+
+- **Elbow Method**
+- **Silhouette Score**
+
+The optimal number of clusters was selected based on model performance.
+
+---
+
+### 6. K-Means Clustering
+
+K-Means clustering was applied to group customers based on their purchasing behavior.
+
+Customers were then assigned to clusters representing different behavioral groups.
+
+---
+
+### 7. PCA Visualization
+
+Principal Component Analysis (PCA) was used to reduce the dataset to 2 dimensions for visualization.
+
+This allows clusters to be visualized in a scatter plot.
+
+---
+
+## Customer Segments
+
+Based on the clustering results, customers can be categorized into segments such as:
+
+- **VIP Customers** — High spending and frequent buyers
+- **Loyal Customers** — Consistent purchasing behavior
+- **Regular Customers** — Moderate purchase activity
+- **At-Risk Customers** — Previously active but recently inactive
+- **Low Value Customers** — Infrequent low spending customers
+
+These segments enable targeted marketing strategies.
+
+---
+
+## Example Visualizations
+
+### Elbow Method
+Determines the optimal number of clusters.
+
+### PCA Cluster Visualization
+Shows how customers are grouped based on purchasing behavior.
+
+### Cluster Heatmap
+Displays average feature values for each cluster.
+
+---
+
+## Key Insights
+
+Some typical insights from segmentation include:
+
+- A small percentage of customers contribute a large share of revenue.
+- Certain customer groups show high recency values, indicating possible churn.
+- Frequent low-value buyers can be targeted with bundle offers.
+- High-value customers should be prioritized with loyalty programs.
+
+---
+
+## Business Recommendations
+
+**VIP Customers**
+- Loyalty rewards
+- Exclusive discounts
+- Early product access
+
+**At-Risk Customers**
+- Re-engagement campaigns
+- Email reminders
+- Targeted promotions
+
+**Regular Customers**
+- Upselling opportunities
+- Product recommendations
+
+**Low Value Customers**
+- Entry-level promotions
+- Personalized marketing
+
+---
+
+## How to Run the Project
+
+1. Clone the repository
+2. Navigate to the project folder
+3. Install dependencies
+4. Run the script
+
+
+Outputs and charts will automatically be generated.
+
+---
+
+## Author
+Olaoluwa Lawal: lawalolaoluwa753@gmail.com
+Data Analytics Portfolio Project  
+Focused on **customer behavior analysis and machine learning segmentation techniques**.

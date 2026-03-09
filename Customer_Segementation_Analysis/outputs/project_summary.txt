@@ -1,0 +1,47 @@
+
+Customer Segmentation Project Summary
+
+Dataset:
+- Online Retail Dataset
+
+Data Cleaning Steps:
+- Removed missing CustomerID rows
+- Removed cancelled invoices
+- Removed rows with non-positive Quantity and UnitPrice
+- Created Revenue feature
+
+Customer Features Used:
+- Recency
+- Frequency
+- Monetary
+- Total_Quantity
+- Unique_Products
+- Avg_Order_Value
+
+Model:
+- K-Means Clustering
+- Optimal number of clusters selected using silhouette score
+- Selected k = 2
+
+Output Files:
+- cleaned_retail_data.csv
+- customer_features.csv
+- customer_segments.csv
+- cluster_summary.csv
+
+Charts Saved:
+- feature_distributions.png
+- boxplots_before_log_transform.png
+- elbow_method.png
+- silhouette_scores.png
+- pca_customer_segments.png
+- cluster_heatmap.png
+
+Segment Mapping:
+{0: 'VIP Customers', 1: 'Loyal Customers'}
+
+Cluster Summary:
+         Recency  Frequency  Monetary  Total_Quantity  Unique_Products  Avg_Order_Value  Customer_Count
+Cluster                                                                                                
+0         128.50       1.77    442.57          254.68            27.69           278.37            2694
+1          33.61       8.37   4695.33         2726.10           116.91           649.89            1644
